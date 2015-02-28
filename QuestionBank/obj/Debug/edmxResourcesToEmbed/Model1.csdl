@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuestionBank_NizamModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuestionBank_NizamEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="questions" EntityType="QuestionBank_NizamModel.question" />
+    <EntitySet Name="subjects" EntityType="QuestionBank_NizamModel.subject" />
+    <EntitySet Name="topics" EntityType="QuestionBank_NizamModel.topic" />
+  </EntityContainer>
+  <EntityType Name="question">
+    <Key>
+      <PropertyRef Name="question_code" />
+    </Key>
+    <Property Name="question_code" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="topics_code" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="question1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="correct_ans" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="wrong_answer1" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="wrong_answer2" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="wrong_answer3" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="difficulty_level" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="estimated_time" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="subject">
+    <Key>
+      <PropertyRef Name="subject_code" />
+    </Key>
+    <Property Name="subject_code" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="subject_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="topic">
+    <Key>
+      <PropertyRef Name="topics_code" />
+    </Key>
+    <Property Name="topics_code" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="subject_code" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="topics_name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

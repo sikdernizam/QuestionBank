@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuestionBank_NizamModelStoreContainer" CdmEntityContainer="QuestionBank_NizamEntities">
+    <EntitySetMapping Name="questions">
+      <EntityTypeMapping TypeName="QuestionBank_NizamModel.question">
+        <MappingFragment StoreEntitySet="question">
+          <ScalarProperty Name="question_code" ColumnName="question_code" />
+          <ScalarProperty Name="topics_code" ColumnName="topics_code" />
+          <ScalarProperty Name="question1" ColumnName="question" />
+          <ScalarProperty Name="correct_ans" ColumnName="correct_ans" />
+          <ScalarProperty Name="wrong_answer1" ColumnName="wrong_answer1" />
+          <ScalarProperty Name="wrong_answer2" ColumnName="wrong_answer2" />
+          <ScalarProperty Name="wrong_answer3" ColumnName="wrong_answer3" />
+          <ScalarProperty Name="difficulty_level" ColumnName="difficulty_level" />
+          <ScalarProperty Name="estimated_time" ColumnName="estimated_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subjects">
+      <EntityTypeMapping TypeName="QuestionBank_NizamModel.subject">
+        <MappingFragment StoreEntitySet="subject">
+          <ScalarProperty Name="subject_code" ColumnName="subject_code" />
+          <ScalarProperty Name="subject_name" ColumnName="subject_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="topics">
+      <EntityTypeMapping TypeName="QuestionBank_NizamModel.topic">
+        <MappingFragment StoreEntitySet="topics">
+          <ScalarProperty Name="topics_code" ColumnName="topics_code" />
+          <ScalarProperty Name="subject_code" ColumnName="subject_code" />
+          <ScalarProperty Name="topics_name" ColumnName="topics_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
